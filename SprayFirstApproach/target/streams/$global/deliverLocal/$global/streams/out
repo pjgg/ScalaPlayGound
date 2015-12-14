@@ -1,0 +1,4 @@
+[0m[[0minfo[0m] [0m:: delivering :: org.pablo#sprayfirstapproach_2.11;1.0 :: 1.0 :: release :: Thu Dec 10 10:59:42 CET 2015[0m
+[0m[[0mdebug[0m] [0m	options = status=release pubdate=Thu Dec 10 10:59:42 CET 2015 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0minfo[0m] [0m	delivering ivy file to /Users/pjgg/Documents/workspace/SprayFirstApproach/target/scala-2.11/ivy-1.0.xml[0m
+[0m[[0mdebug[0m] [0m	deliver done (18ms)[0m

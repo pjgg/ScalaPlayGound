@@ -1,0 +1,23 @@
+[0m[[0minfo[0m] [0mPackaging /Users/pjgg/Documents/workspace/SprayFirstApproach/target/scala-2.11/sprayfirstapproach_2.11-1.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	org/pablo/Main.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/Main.scala[0m
+[0m[[0mdebug[0m] [0m	org/pablo/converters/PersonJsonConverter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/converters/PersonJsonConverter.scala[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/resources/application.conf[0m
+[0m[[0mdebug[0m] [0m	org/pablo/Resources.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/Resources.scala[0m
+[0m[[0mdebug[0m] [0m	org/pablo/repository/PersonDao.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/repository/PersonDao.scala[0m
+[0m[[0mdebug[0m] [0m	org/pablo/RequestFilter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/RequestFilter.scala[0m
+[0m[[0mdebug[0m] [0m	logback.xml[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/resources/logback.xml[0m
+[0m[[0mdebug[0m] [0m	org/pablo/AsycResources.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/AsycResources.scala[0m
+[0m[[0mdebug[0m] [0m	org/pablo/ResponseFilter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/ResponseFilter.scala[0m
+[0m[[0mdebug[0m] [0m	org/pablo/dto/PersonDto.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/pjgg/Documents/workspace/SprayFirstApproach/src/main/scala-2.11/org/pablo/dto/PersonDto.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
