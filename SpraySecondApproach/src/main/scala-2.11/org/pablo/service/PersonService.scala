@@ -9,8 +9,18 @@ import org.pablo.model.Plumber
 import org.pablo.model.Teacher
 import org.pablo.repository.PersonDao
 
+import javax.inject.Named
 
-class PersonService(implicit val executionContext: ExecutionContext) {
+trait PersonServiceInterface {
+  def retrieveAll(): Future[Vector[Person]]
+  def createTeacher(person :Teacher): Future[Option[String]]
+  def createPlumber(person :Plumber): Future[Option[String]]
+  def retrievePerson(id :String): Future[Option[Person]]
+  def updatePerson(id: String, person: PersonUpdate): Future[Option[Person]]
+  def deletePerson(id :String): Future[Unit]
+}
+
+class PersonService()(implicit val executionContext: ExecutionContext) extends PersonServiceInterface{
 
   def retrieveAll(): Future[Vector[Person]] = Future {
     PersonDao.getPeople

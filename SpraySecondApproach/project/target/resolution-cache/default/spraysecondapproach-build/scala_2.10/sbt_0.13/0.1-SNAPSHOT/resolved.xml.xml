@@ -4,7 +4,7 @@
 		module="spraysecondapproach-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20151210171637"
+		publication="20151214162415"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

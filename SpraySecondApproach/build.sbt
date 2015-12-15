@@ -23,6 +23,7 @@ resolvers ++= Seq("Typesafe Repository" at "http://repo.typesafe.com/typesafe/re
     "org.json4s" %% "json4s-native" % "3.2.10",
     "org.json4s"        %% "json4s-ext"      % "3.2.10",
     "ch.qos.logback"    %  "logback-classic" % "1.1.2",
+    "com.google.inject" %  "guice"           % "3.0",
     "com.typesafe.akka" %% "akka-testkit"    % akkaVersion  % "test",
     "io.spray"          %% "spray-testkit"   % sprayVersion % "test",
     "org.specs2"        %% "specs2"          % "2.3.13"     % "test"

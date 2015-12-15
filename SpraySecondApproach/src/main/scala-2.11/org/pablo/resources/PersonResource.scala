@@ -8,10 +8,12 @@ import org.pablo.model.Teacher
 import org.pablo.model.Plumber
 import org.pablo.model.PersonUpdate
 import akka.actor.ActorLogging
+import com.google.inject.Inject
+import org.pablo.service.PersonServiceInterface
 
 trait PersonResource extends MyHttpService {
 
-  val personService: PersonService
+  val personService: PersonServiceInterface
 
   def personRoutes: Route = pathPrefix("person") {
     path("teacher") {
@@ -51,4 +53,6 @@ trait PersonResource extends MyHttpService {
       }
     }
   }
+  
+  
 }

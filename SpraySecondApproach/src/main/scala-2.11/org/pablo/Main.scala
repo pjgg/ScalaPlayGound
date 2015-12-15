@@ -6,8 +6,11 @@ import akka.pattern.ask
 import akka.util.Timeout
 import com.typesafe.config.ConfigFactory
 import spray.can.Http
-
 import scala.concurrent.duration._
+import org.pablo.util.DependencyModule
+import com.google.inject.Guice
+import com.google.inject.Injector
+import org.pablo.service.PersonServiceInterface
 
 object Main extends App {
   val config = ConfigFactory.load()
@@ -18,8 +21,11 @@ object Main extends App {
   implicit val executionContext = system.dispatcher
   implicit val timeout = Timeout(10 seconds)
 
-  val api = system.actorOf(Props(new RestInterface))
-
+  implicit val injector:Injector = Guice.createInjector(new DependencyModule)
+  val personServiceImpl:PersonServiceInterface  = injector.getInstance(classOf[PersonServiceInterface])
+  
+  val api = system.actorOf(Props(new RestInterface(personServiceImpl)))
+  
   IO(Http).ask(Http.Bind(listener = api, interface = host, port = port))
     .mapTo[Http.Event]
     .map {
