@@ -1,0 +1,13 @@
+New log file opened at Mon Dec 14 14:56:44 CET 2015 by 2307@Pablos-MacBook-Pro.local
+Taking next connection to: 54038
+New client attempting to connect on port: 54039-54038
+  Address = /10.0.6.0:54038
+This client on port 54039 has uuid a6c63239-627d-4dea-872c-44000b92c352 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-a6c63239-627d-4dea-872c-44000b92c352
+Taking next connection to: 54038
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 2307@Pablos-MacBook-Pro.local logs at Mon Dec 14 14:59:46 CET 2015, goodbye.
