@@ -1,14 +1,15 @@
 package org.pablo.routing
 
+import scala.concurrent.{ExecutionContext, Future}
+
 import org.pablo.serializers.JsonSupport
+
 import spray.http.HttpHeaders
 import spray.routing._
 
-import scala.concurrent.{ExecutionContext, Future}
-
 trait MyHttpService extends HttpService with JsonSupport {
 
-  implicit val executionContext: ExecutionContext
+  implicit val executionContext: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
   def completeWithLocationHeader[T](resourceId: Future[Option[T]], ifDefinedStatus: Int, ifEmptyStatus: Int): Route =
     onSuccess(resourceId) { maybeT =>

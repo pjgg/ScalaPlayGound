@@ -1,6 +1,6 @@
 package org.pablo
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.postfixOps
 import org.pablo.resources.PersonResource
 import org.pablo.resources.QuestionResource
@@ -12,7 +12,7 @@ import spray.routing._
 import org.pablo.service.PersonServiceInterface
 
 
-class RestInterface @Inject() (pService: PersonServiceInterface)( implicit val executionContext: ExecutionContext) extends HttpServiceActor with Resources {
+class RestApi (@Inject pService: PersonServiceInterface) extends HttpServiceActor with Resources {
 
   def receive = runRoute(routes)
   

@@ -24,7 +24,7 @@ object Main extends App {
   implicit val injector:Injector = Guice.createInjector(new DependencyModule)
   val personServiceImpl:PersonServiceInterface  = injector.getInstance(classOf[PersonServiceInterface])
   
-  val api = system.actorOf(Props(new RestInterface(personServiceImpl)))
+  val api = system.actorOf(Props(new RestApi(personServiceImpl)))
   
   IO(Http).ask(Http.Bind(listener = api, interface = host, port = port))
     .mapTo[Http.Event]

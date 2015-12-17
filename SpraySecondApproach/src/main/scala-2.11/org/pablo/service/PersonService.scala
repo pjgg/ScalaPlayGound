@@ -1,15 +1,18 @@
 package org.pablo.service
 
-import scala.concurrent.ExecutionContext
-import scala.concurrent.Future
-
+import scala.concurrent.{ExecutionContext,Future}
 import org.pablo.model.Person
 import org.pablo.model.PersonUpdate
 import org.pablo.model.Plumber
 import org.pablo.model.Teacher
 import org.pablo.repository.PersonDao
-
 import javax.inject.Named
+import com.google.inject.Inject
+import org.pablo.repository.PersonDao
+import org.pablo.repository.PersonDao
+import org.pablo.repository.MockDao
+import scala.concurrent.ExecutionContext.Implicits.global
+
 
 trait PersonServiceInterface {
   def retrieveAll(): Future[Vector[Person]]
@@ -20,8 +23,8 @@ trait PersonServiceInterface {
   def deletePerson(id :String): Future[Unit]
 }
 
-class PersonService()(implicit val executionContext: ExecutionContext) extends PersonServiceInterface{
-
+class PersonService() extends PersonServiceInterface{
+  
   def retrieveAll(): Future[Vector[Person]] = Future {
     PersonDao.getPeople
   }

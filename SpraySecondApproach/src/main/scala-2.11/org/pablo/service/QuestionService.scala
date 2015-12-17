@@ -2,9 +2,10 @@ package org.pablo.services
 
 import org.pablo.model.{Question, QuestionUpdate}
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
-class QuestionService(implicit val executionContext: ExecutionContext) {
+class QuestionService() {
 
   var questions = Vector.empty[Question]
 
