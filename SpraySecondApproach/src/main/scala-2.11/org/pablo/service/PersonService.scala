@@ -10,8 +10,11 @@ import javax.inject.Named
 import com.google.inject.Inject
 import org.pablo.repository.PersonDao
 import org.pablo.repository.PersonDao
-import org.pablo.repository.MockDao
 import scala.concurrent.ExecutionContext.Implicits.global
+import org.pablo.repository.PersonDao
+import scaldi.{Injectable, Module, Injector}
+import org.pablo.repository.PersonDao
+import org.pablo.repository.PersonDaoInterface
 
 
 trait PersonServiceInterface {
@@ -23,32 +26,34 @@ trait PersonServiceInterface {
   def deletePerson(id :String): Future[Unit]
 }
 
-class PersonService() extends PersonServiceInterface{
+class PersonService(implicit injector:Injector) extends PersonServiceInterface with Injectable{
+  
+  val PersonDaoInterface = inject[PersonDaoInterface]
   
   def retrieveAll(): Future[Vector[Person]] = Future {
-    PersonDao.getPeople
+    PersonDaoInterface.getPeople
   }
   
   def createTeacher(person :Teacher): Future[Option[String]] = Future{
-    PersonDao.getPeople().find(_.getId() == person.id ) match {
+    PersonDaoInterface.getPeople().find(_.getId() == person.id ) match {
       case Some(p) => None // Conflict! id is already taken
       case None =>
-        PersonDao.setPeople(PersonDao.getPeople.:+(person))
+        PersonDaoInterface.setPeople(PersonDaoInterface.getPeople.:+(person))
         Some(person.id)
     }
   }
   
   def createPlumber(person :Plumber): Future[Option[String]] = Future{
-    PersonDao.getPeople().find(_.getId() == person.id ) match {
+    PersonDaoInterface.getPeople().find(_.getId() == person.id ) match {
       case Some(p) => None // Conflict! id is already taken
       case None =>
-        PersonDao.setPeople(PersonDao.getPeople.:+(person))
+        PersonDaoInterface.setPeople(PersonDaoInterface.getPeople.:+(person))
         Some(person.id)
     }
   }
   
   def retrievePerson(id :String): Future[Option[Person]] = Future {
-    PersonDao.getPeople().find(_.getId() == id )
+    PersonDaoInterface.getPeople().find(_.getId() == id )
   }
   
   def updatePerson(id: String, person: PersonUpdate): Future[Option[Person]] = {
@@ -75,7 +80,7 @@ class PersonService() extends PersonServiceInterface{
   }
   
   def deletePerson(id :String): Future[Unit] = Future {
-    PersonDao.setPeople(PersonDao.getPeople().filterNot(_.getId() == id ))
+    PersonDaoInterface.setPeople(PersonDaoInterface.getPeople().filterNot(_.getId() == id ))
   }
   
   private def modifyPerson(currentPerson: Person, person: PersonUpdate): Option[Person] = {

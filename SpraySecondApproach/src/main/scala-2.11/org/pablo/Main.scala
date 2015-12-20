@@ -2,7 +2,6 @@ package org.pablo
 
 import scala.concurrent.duration._
 import org.pablo.service.PersonServiceInterface
-import org.pablo.util.DependencyModule
 import org.pablo.util.ScaldiModule
 import com.typesafe.config.ConfigFactory
 import akka.actor._
