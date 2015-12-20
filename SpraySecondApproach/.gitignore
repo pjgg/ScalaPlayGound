@@ -4,3 +4,4 @@
 
 .sbtserver
 /target/*
+/project/target/*
