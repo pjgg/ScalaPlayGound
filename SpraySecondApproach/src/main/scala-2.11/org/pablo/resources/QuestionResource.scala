@@ -2,7 +2,7 @@ package org.pablo.resources
 
 import org.pablo.model.{QuestionUpdate, Question}
 import org.pablo.routing.MyHttpService
-import org.pablo.services.QuestionService
+import org.pablo.service.QuestionService
 import spray.routing._
 
 trait QuestionResource extends MyHttpService {

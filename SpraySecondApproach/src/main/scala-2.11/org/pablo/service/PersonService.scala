@@ -1,19 +1,12 @@
 package org.pablo.service
 
 import scala.concurrent.{ExecutionContext,Future}
-import org.pablo.model.Person
-import org.pablo.model.PersonUpdate
-import org.pablo.model.Plumber
-import org.pablo.model.Teacher
+import org.pablo.model.{Teacher, Plumber, PersonUpdate, Person}
 import org.pablo.repository.PersonDao
 import javax.inject.Named
 import com.google.inject.Inject
-import org.pablo.repository.PersonDao
-import org.pablo.repository.PersonDao
 import scala.concurrent.ExecutionContext.Implicits.global
-import org.pablo.repository.PersonDao
 import scaldi.{Injectable, Module, Injector}
-import org.pablo.repository.PersonDao
 import org.pablo.repository.PersonDaoInterface
 
 
@@ -61,16 +54,13 @@ class PersonService(implicit injector:Injector) extends PersonServiceInterface w
     retrievePerson(id).flatMap{ personRetrived =>
       personRetrived match{
         case None => Future { None } // no person Found
+        case Some(p:Teacher) => 
+           val updatedPerson:Teacher = modifyPerson(p, person).asInstanceOf[Teacher]
+           deletePerson(id).flatMap { _ => createTeacher( updatedPerson).map(_ => Option(updatedPerson)) }
         
-        case Some(p)  => 
-          val updatedPerson = modifyPerson(p, person)
-          deletePerson(id).flatMap { _ =>
-            if(p.isInstanceOf[Plumber]){
-              createPlumber(updatedPerson.asInstanceOf[Plumber]).map(_ => updatedPerson)
-            }else{
-              createTeacher(updatedPerson.asInstanceOf[Teacher]).map(_ => updatedPerson)
-            }
-          }
+        case Some(p:Plumber)  => 
+          val updatedPerson:Plumber = modifyPerson(p, person).asInstanceOf[Plumber]
+          deletePerson(id).flatMap { _ => createPlumber(updatedPerson).map(_ => Option(updatedPerson)) }
           
         case _=> 
           println("something else happened?")
@@ -83,14 +73,13 @@ class PersonService(implicit injector:Injector) extends PersonServiceInterface w
     PersonDaoInterface.setPeople(PersonDaoInterface.getPeople().filterNot(_.getId() == id ))
   }
   
-  private def modifyPerson(currentPerson: Person, person: PersonUpdate): Option[Person] = {
+  private def modifyPerson(currentPerson: Person, person: PersonUpdate): Person = {
        val firstName: String = person.firstName.getOrElse("None")
        val lastName:String = person.lastName.getOrElse("None")
        val age:Int = person.age.getOrElse(0)
        currentPerson match{
-         case p:Teacher => Option(Teacher(currentPerson.getId(), firstName, lastName, age))
-         case p:Plumber => Option(Plumber(currentPerson.getId(), firstName, lastName, age))
-         case _ => None
+         case p:Teacher => Teacher(currentPerson.getId(), firstName, lastName, age)
+         case p:Plumber => Plumber(currentPerson.getId(), firstName, lastName, age)
        }
        
     }

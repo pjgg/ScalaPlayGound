@@ -1,6 +1,7 @@
-package org.pablo.services
+package org.pablo.service
 
 import org.pablo.model.{Question, QuestionUpdate}
+
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global

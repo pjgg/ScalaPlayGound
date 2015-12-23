@@ -1,6 +1,6 @@
 package org.pablo.model
 
-sealed class Person(identifier : String) {
+class Person(identifier : String) {
   
   private var id :String = identifier
     
