@@ -34,7 +34,7 @@ trait PersonResource extends MyHttpService {
       } ~
       path("list" / "all") {
         get {
-          complete(personService.retrieveAll())
+          complete(200, personService.retrieveAll())
         }
       }~
     path(Segment) { id =>

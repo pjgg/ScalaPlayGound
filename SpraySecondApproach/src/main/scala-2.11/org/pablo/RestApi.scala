@@ -1,18 +1,21 @@
 package org.pablo
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.language.postfixOps
-import org.pablo.resources.{QuestionResource,PersonResource}
-import org.pablo.service.{PersonService, QuestionService}
-import spray.routing._
-import org.pablo.service.PersonServiceInterface
-import scaldi.{Injectable, Module, Injector}
-import org.pablo.converters.Converter
-import org.pablo.model.{Plumber,Teacher}
-import org.pablo.dto.{PlumberDto,TeacherDto}
-import org.pablo.model.Person
-import org.pablo.dto.PersonDto
 import scala.concurrent.Future
+import scala.language.postfixOps
+import org.pablo.converters.Converter
+import org.pablo.dto.PersonDto
+import org.pablo.model.Person
+import org.pablo.resources.PersonResource
+import org.pablo.resources.QuestionResource
+import org.pablo.service.PersonServiceInterface
+import org.pablo.service.QuestionService
+import scaldi.Injectable
+import scaldi.Injector
+import scaldi.Module
+import spray.routing._
+import spray.util.LoggingContext
+import org.pablo.dto.ErrorMessage
 
 class RestApi(implicit injector:Injector) extends HttpServiceActor with Resources with Injectable{
 
@@ -27,7 +30,10 @@ class RestApi(implicit injector:Injector) extends HttpServiceActor with Resource
   val questionService = new QuestionService
 
   val routes: Route = {personRoutes ~ questionRoutes}
-
+  
+  implicit val jsonRejectionHandler = RejectionHandler {
+    case MalformedRequestContentRejection(msg, cause) :: _ => complete(400, ErrorMessage("The request content was malformed", msg))
+  }
 }
 
 trait Resources extends PersonResource with QuestionResource

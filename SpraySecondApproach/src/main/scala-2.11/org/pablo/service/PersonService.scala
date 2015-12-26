@@ -8,6 +8,7 @@ import com.google.inject.Inject
 import scala.concurrent.ExecutionContext.Implicits.global
 import scaldi.{Injectable, Module, Injector}
 import org.pablo.repository.PersonDaoInterface
+import spray.util.LoggingContext
 
 
 trait PersonServiceInterface {
@@ -19,7 +20,7 @@ trait PersonServiceInterface {
   def deletePerson(id :String): Future[Unit]
 }
 
-class PersonService(implicit injector:Injector) extends PersonServiceInterface with Injectable{
+class PersonService(implicit injector:Injector, implicit val log: LoggingContext) extends PersonServiceInterface with Injectable{
   
   val PersonDaoInterface = inject[PersonDaoInterface]
   
