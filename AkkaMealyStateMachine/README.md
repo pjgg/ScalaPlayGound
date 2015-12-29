@@ -9,8 +9,8 @@ Final State => Tender
 
 ## Transitions table 
 
-| q             | q'                                | s                                       |
-| ------------- |-----------------------------------|----------------------------------------:|
-|               | FullPint    EmptyPint    Ticket   |FullPint     EmptyPint     Ticket        |
-| Tender        | Tender   Tender         Person    | None      None          FullPint        |
-| Person        | Tender   Person         Person    | Tender    None          FullPint        |
+| q             | q'                                   | s                                          |
+| ------------- |--------------------------------------|--------------------------------------------|
+|               | FullPint    EmptyPint       Ticket   |FullPint     EmptyPint     Ticket           |
+| Tender        | Tender       Tender          Person  | None         None          FullPint        |
+| Person        | Tender       Person          Person  | Tender       None          FullPint        |
