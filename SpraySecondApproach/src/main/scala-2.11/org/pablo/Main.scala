@@ -16,6 +16,8 @@ object Main extends App {
   val host = config.getString("http.host")
   val port = config.getInt("http.port")
 
+  // ActorSystem is a heavy object: create only one per application
+  // http://doc.example.io/docs/example/snapshot/scala/actors.html
   implicit val system = ActorSystem("mySecondSprayAPI")
   implicit val executionContext = system.dispatcher
   implicit val timeout = Timeout(10 seconds)
