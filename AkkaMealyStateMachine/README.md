@@ -16,5 +16,5 @@
 |               | FullPint    EmptyPint       Ticket   |FullPint     EmptyPint     Ticket           |
 |-------------- |--------------------------------------|--------------------------------------------|
 | Tender        | Tender       Tender          Person  | None         None          FullPint        |
-| Person        | Tender       Person          Person  | Tender       None          FullPint        |
+| Person        | Tender       Person          Person  | EmptyPint    None          FullPint        |
 ```
