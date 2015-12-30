@@ -15,7 +15,7 @@ object Main extends App {
    
   val tenderActor = system.actorOf(Props(new Tender), name = "tender")
     
-  val daniActor = system.actorOf(Props(new Person), "dani")
+  val daniActor = system.actorOf(Props[Person], "dani")
   val pabloActor = system.actorOf(Props(new Person), "pablo")
     
   tenderActor!OpenTime
