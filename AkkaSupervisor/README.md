@@ -176,9 +176,9 @@ Pablo.
 [grafanaLogin]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/grafanaLogin.png
 [newDataSource]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/dataSource.png
 [host]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/host.png
-[OsMetrcis]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/OSMetrics.png
-[JVMmetrcis]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcis.png
-[JVMmetrcisTwo]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcisTwo.png
+[OsMetrics]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/OSMetrics.png
+[JVMmetrics]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcis.png
+[JVMmetricsTwo]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcisTwo.png
 [AkkaMetrics]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetrcis.png
 [AkkaMetricsTwo]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetricsTwo.png
 [plugins.sbt]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/project/plugins.sbt>
