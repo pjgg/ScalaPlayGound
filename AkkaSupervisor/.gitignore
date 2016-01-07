@@ -1,0 +1,9 @@
+/bin/*
+
+/bin/
+.sbtserver
+/target/*
+/project/target/*
+*.cache
+*.class
+*.idea
