@@ -29,11 +29,11 @@ class Tender extends Actor with ActorLogging{
     case Ticket(amount, drunkerName) => 
       total = total + amount
       //generate random Exceptions in order to test supervisionStrategy
-      import util.Random
-      if (Random.nextBoolean()){
-        log.info("Random exception was thown...")
-        throw new RepoDownException("OMG, not again!")
-      }
+//      import util.Random
+//      if (Random.nextBoolean()){
+//        log.info("Random exception was thown...")
+//        throw new RepoDownException("OMG, not again!")
+//      }
       
       log.info(s"$amount pints for $drunkerName")
       

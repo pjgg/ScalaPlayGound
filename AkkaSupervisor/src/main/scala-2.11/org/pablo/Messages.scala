@@ -6,3 +6,4 @@ case class EmptyPint (amount: Int, drunkerName: String)
 
 case object TimeToClose
 case object OpenTime
+

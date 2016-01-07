@@ -2,16 +2,12 @@ package org.pablo
 
 import akka.actor.Actor
 import akka.actor.ActorInitializationException
-import akka.actor.ActorKilledException
 import akka.actor.ActorLogging
 import akka.actor.ActorRef
-import akka.actor.Props
 import akka.actor.SupervisorStrategy
 import akka.actor.SupervisorStrategy._
-import akka.actor.Terminated
 import scala.concurrent.duration._
-import akka.actor.OneForOneStrategy
-import akka.actor.DeadLetter
+import akka.actor.{OneForOneStrategy,DeadLetter, Terminated, Props, ActorKilledException}
 
 
 class OwnerSupervisor extends Actor with ActorLogging{

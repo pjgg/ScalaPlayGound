@@ -160,6 +160,12 @@ And Akka metrics
 Well and that it's all. Maybe you think that it's not too much,  or even that a docker image of Grafana and friends are not enough for a production environment (and I will be agree) but this is a start point. 
 In my opinion a code instrumentation strategy it's not good enough for a high performance app. But for development it's a very good decision because help you to understand where your bottle necks are, and also if you are a akka/scala beginner then will help you to understand better how all of this stuff works. You could ask question to your self as, how many thread I am using?, heap size? number of queues(mailboxes) ...etc 
 
+Note: don't forget to save your grafana conf changes.
+
+```
+docker commit a67dd8d4e45e karmon-conf
+```
+
 Well feel free to write down any question. 
 
 Pablo.

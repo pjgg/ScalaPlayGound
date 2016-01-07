@@ -14,7 +14,6 @@ object Main extends App {
   
    Kamon.start()
   
- 
   // ActorSystem is a heavy object: create only one per application
   // http://doc.example.io/docs/example/snapshot/scala/actors.html
   implicit val system = ActorSystem(appName) 
