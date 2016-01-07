@@ -1,6 +1,6 @@
 # Akka Supervisor plus Kamon monitor example
 
-Based in a previous example [AkkaMealyAdvanceStateMachine] where I create an irishPub with a Tender and several customers and a opening and closing pub scheduler, I create this other example with a supervisor and monitoring.  
+Based in a previous example [AkkaMealyAdvanceStateMachine] where I create an irishPub with a Tender and several customers and an opening and closing pub scheduler, I create this other example with a supervisor and monitoring.  
 If a customer '[Person]' order a pint when the pub is closed, then the [tender] will not deliver any pint to this customer, but if the pints are ordered before the closing time then all the pints will be delivered. 
 Also a tender can blow up at anytime, and throw an exception '[RepoDownException]' randomly. This exception must be handler by the supervisor '[OwnerSupervisor]' who will clean all the tender orders and 
 create an other tender totally new. 
@@ -85,7 +85,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-aspectj" % "0.9.4")
 ```
 
 From a code point of view you only have to write down 'Kamon.start()' at the beginning of your app and 'Kamon.shutdown()' at the end as you can see in my [main object].
-Yeah!, you are almost there. Maybe at this point you hate me, or event worst you hate your self, but believe me you did a great job you touch a lot of technologies and  remember if you are stuck 
+Yeah!, you are almost there. Maybe at this point you hate me, or event worst you hate your self, but believe me you did a great job, you touch a lot of technologies and  remember if you are stuck 
 in the middle of something just write me!. No body does in decades so feel free... but the most important is don't give up!. So stop of crying and move on!!!. 
 
 Let see the [app configuration]    
