@@ -126,11 +126,11 @@ $ sbt run
 
 Be sure that you are pointing to the right hosts
 
-<Enter>
 
-[host]
 
-<Enter>
+![alt text] [host]
+
+
 
 And then enjoy your operative system metrics
 
