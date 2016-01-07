@@ -134,39 +134,28 @@ Be sure that you are pointing to the right hosts
 
 And then enjoy your operative system metrics
 
-<Enter>
 
-[OsMetrcis]
 
-<Enter>
+![alt text] [OsMetrcis]
+
+
 
 JVM metrics
 
-<Enter>
 
-[JVMmetrics]
 
-<Enter>
+![alt text] [JVMmetrics]
 
-<Enter>
 
-[JVMmetricsTwo]
+![alt text] [JVMmetricsTwo]
 
-<Enter>
 
 And Akka metrics
 
-<Enter>
 
-[AkkaMetrics]
+![alt text] [AkkaMetrics]
 
-<Enter>
-
-<Enter>
-
-[AkkaMetricsTwo]
-
-<Enter>
+![alt text] [AkkaMetricsTwo]
 
 Well and that it's all. Maybe you think that it's not too much,  or even that a docker image of Grafana and friends are not enough for a production environment (and I will be agree) but this is a start point. 
 In my opinion a code instrumentation strategy it's not good for a high performance app. But for development it's a very good decision because help you to understand where your bottle necks are, and also if you are a akka/scala beginner then will help you to understand better how all of this stuff works. You could ask question to your self as, how many thread I am using?, heap size? number of queues(mailboxes) ...etc 
