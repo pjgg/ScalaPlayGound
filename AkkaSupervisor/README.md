@@ -39,9 +39,10 @@ $ docker-machine ip default
 ```
 
 Broser -> 192.168.99.100/login
-You should see something like this:<Enter>
-[grafanaLogin]
-<Enter>
+You should see something like this:
+
+![alt text] [grafanaLogin]
+
 default user and password are: admin/admin
 
 <Enter>
@@ -50,11 +51,10 @@ Once you are login, the first thing that you should do is setup you own data sou
 press 'Data Source' and create a new Data Source. Don't be afraid about anything remember that you are working over a virtual image (Docker stuff) you will not break anything!, and you can recreate your current environment one time after an other!.
 Set your datasource as a default dataSource and as a Http settings Url write down 'http://localhost:8000' You can read [Kamon] doc in order to know more. Test your connection, and save it. 
 
-<Enter>
 
-[newDataSource]
 
-<Enter>
+![alt text] [newDataSource]
+
 
 Ok now lets move on to your app. We have to configure your app in order to do the code instrumentation. To do it just add the following dependencies 
 
@@ -158,7 +158,7 @@ And Akka metrics
 ![alt text] [AkkaMetricsTwo]
 
 Well and that it's all. Maybe you think that it's not too much,  or even that a docker image of Grafana and friends are not enough for a production environment (and I will be agree) but this is a start point. 
-In my opinion a code instrumentation strategy it's not good for a high performance app. But for development it's a very good decision because help you to understand where your bottle necks are, and also if you are a akka/scala beginner then will help you to understand better how all of this stuff works. You could ask question to your self as, how many thread I am using?, heap size? number of queues(mailboxes) ...etc 
+In my opinion a code instrumentation strategy it's not good enough for a high performance app. But for development it's a very good decision because help you to understand where your bottle necks are, and also if you are a akka/scala beginner then will help you to understand better how all of this stuff works. You could ask question to your self as, how many thread I am using?, heap size? number of queues(mailboxes) ...etc 
 
 Well feel free to write down any question. 
 
