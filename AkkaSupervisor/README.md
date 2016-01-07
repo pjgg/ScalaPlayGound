@@ -47,7 +47,7 @@ default user and password are: admin/admin
 
 <Enter>
 
-Once you are login, the first thing that you should do is setup you own data source or in other words, your system would like to know where the data come from, define your stream of data. So in the left panel 
+Once you are login, the first thing that you should do is setup you own data source or in other words, your system would like to know where the data come from, define your stream of data. So click in the left panel 
 press 'Data Source' and create a new Data Source. Don't be afraid about anything remember that you are working over a virtual image (Docker stuff) you will not break anything!, and you can recreate your current environment one time after an other!.
 Set your datasource as a default dataSource and as a Http settings Url write down 'http://localhost:8000' You can read [Kamon] doc in order to know more. Test your connection, and save it. 
 
