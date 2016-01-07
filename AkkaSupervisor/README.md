@@ -184,14 +184,14 @@ Pablo.
 [Statsd]: <https://www.datadoghq.com/blog/statsd/>
 [Graphite]: <https://graphite.readthedocs.org/en/latest/>
 [Grafana 2]: <http://grafana.org/>
-[grafanaLogin]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/grafanaLogin.png>
-[newDataSource]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/dataSource.png>
-[host]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/host.png>
-[OsMetrcis]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/OSMetrics.png>
-[JVMmetrcis]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcis.png>
-[JVMmetrcisTwo]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcisTwo.png>
-[AkkaMetrics]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetrcis.png>
-[AkkaMetricsTwo]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetricsTwo.png>
+[grafanaLogin]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/grafanaLogin.png
+[newDataSource]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/dataSource.png
+[host]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/host.png
+[OsMetrcis]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/OSMetrics.png
+[JVMmetrcis]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcis.png
+[JVMmetrcisTwo]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcisTwo.png
+[AkkaMetrics]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetrcis.png
+[AkkaMetricsTwo]: https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetricsTwo.png
 [plugins.sbt]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/project/plugins.sbt>
 [build.sbt]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/build.sbt>
 [main object]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/scala-2.11/org/pablo/Main.scala>
