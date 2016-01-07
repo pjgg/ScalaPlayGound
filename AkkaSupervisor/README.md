@@ -168,6 +168,12 @@ And Akka metrics
 
 <Enter>
 
+Well and that it's all. Maybe you think that it's not too much,  or even that a docker image of Grafana and friends are not enough for a production environment (and I will be agree) but this is a start point. 
+In my opinion a code instrumentation strategy it's not good for a high performance app. But for development it's a very good decision because help you to understand where your bottle necks are, and also if you are a akka/scala beginner then will help you to understand better how all of this stuff works. You could ask question to your self as, how many thread I am using?, heap size? number of queues(mailboxes) ...etc 
+
+Well feel free to write down any question. 
+
+Pablo.
 
 [Kamon]: <https://github.com/kamon-io/docker-grafana-graphite>
 [AkkaMealyAdvanceStateMachine]: <https://github.com/pjgg/ScalaPlayGound/tree/master/AkkaMealyAdvanceStateMachine>
@@ -178,14 +184,14 @@ And Akka metrics
 [Statsd]: <https://www.datadoghq.com/blog/statsd/>
 [Graphite]: <https://graphite.readthedocs.org/en/latest/>
 [Grafana 2]: <http://grafana.org/>
-[grafanaLogin]: <>
-[newDataSource]: <>
-[host]: <>
-[OsMetrcis]: <>
-[JVMmetrcis]: <>
-[JVMmetrcisTwo]: <>
-[AkkaMetrics]: <>
-[AkkaMetricsTwo]: <>
+[grafanaLogin]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/grafanaLogin.png>
+[newDataSource]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/dataSource.png>
+[host]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/host.png>
+[OsMetrcis]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/OSMetrics.png>
+[JVMmetrcis]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcis.png>
+[JVMmetrcisTwo]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/JVMmetrcisTwo.png>
+[AkkaMetrics]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetrcis.png>
+[AkkaMetricsTwo]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/resources/doc-img/AkkaMetricsTwo.png>
 [plugins.sbt]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/project/plugins.sbt>
 [build.sbt]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/build.sbt>
 [main object]: <https://github.com/pjgg/ScalaPlayGound/blob/master/AkkaSupervisor/src/main/scala-2.11/org/pablo/Main.scala>
