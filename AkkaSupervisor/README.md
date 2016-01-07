@@ -136,7 +136,7 @@ And then enjoy your operative system metrics
 
 
 
-![alt text] [OsMetrcis]
+![alt text] [OsMetrics]
 
 
 
