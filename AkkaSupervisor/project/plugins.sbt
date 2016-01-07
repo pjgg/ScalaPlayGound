@@ -8,5 +8,4 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-multi-jvm" % "0.3.9")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-aspectj" % "0.9.4")
 
-addSbtPlugin("io.kamon" % "aspectj-runner" % "0.1.2")
 
